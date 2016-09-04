@@ -1,0 +1,42 @@
+@primarycolor: #FF7F50;
+@color:#800080;
+@CardColor:#DEDBD8;
+
+body{
+	padding:1%;
+}
+.centered{
+	margin-left:40%;
+	width:20%;
+}
+.cardRow{
+	width:92%;
+	margin:5% 5% 5% 3%;
+	overflow-x:hidden;
+	overflow-y:hidden;
+	//backgroundColor:"tan";
+	display:inline-flex;
+}
+.showing{
+	display:block;
+	border: 1px solid #fff;
+	padding:3%;
+	margin:0;
+	margin-left:2%;
+	width:31.33%;
+	height:200px;
+	overflow-x:auto;
+	overflow-y:auto;
+	background-color:@CardColor;
+	vertical-align:top
+}
+.hiding{
+	display:none;
+}
+.mainBlock{
+	//width: 100%!important;
+	margin:1%;
+}
+ul.pagination>li{
+	cursor:pointer;
+}
