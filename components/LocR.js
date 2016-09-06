@@ -7,14 +7,15 @@ export default class LocR extends React.Component {
 
       return (
          <div className="well">
-            <div className="row">
-               <div className="col-md-3">
-                  <h4 className="text-primary">Search Nearby Restaurant</h4>
+            <div className="row bottom-align-text">
+               <h4 className="col-md-3 text-primary">Search Nearby Restaurant</h4>
+               <div className="col-md-9 bottom-align-text-item">
                   <span className="text-warning">Put Location to Find Near Restaurant. </span>
                   <span className="text-muted small">(It is NOT real map tracking: the addresses are fake.)</span>
                </div>
-               <LocForm className="col-md-9" wholeSet={this.props.wholeSet} />
-               </div>
+               
+            </div>
+            <div><LocForm wholeSet={this.props.wholeSet} /></div>
          </div>
       );
    }
@@ -107,7 +108,7 @@ class LocForm extends React.Component{
    }
    render() {
       return (
-         <div>
+         <div className="">
 	         <form className="form-inline" onSubmit= {this.updateState} id="locForm">
    				<div className="form-group">
                   <div className="input-group">
@@ -134,15 +135,16 @@ class LocForm extends React.Component{
                        </ul>
                      </div>
                      <div className="input-group-addon"  onClick={this._dropdown}><span className="caret"></span></div>
-                  </div> 
+                  </div>
    					<div className="input-group">
-                     <label  className="input-group-addon">Zip Code</label>
+                     <label  className="input-group-addon">Zip</label>
    					   <input type="text"  id="zip" name="zip" className="form-control"  placeholder='Zip Code' onChange = {this._onChange}/>
                   </div>
-   				</div>
+                  <button onClick = {this._onClick} className="btn btn-info glyphicon glyphicon-map-marker form-control"></button>
+                  <button type="submit" value="submit" className="btn btn-primary form-control ">Search</button>
                
-				  <button onClick = {this._onClick} className="btn btn-info glyphicon glyphicon-map-marker form-control"></button>
-	           <button type="submit" value="submit" className="btn btn-primary form-control">Search</button>
+               </div>
+               
 	         </form>
 
 	         <div>

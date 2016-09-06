@@ -1,5 +1,6 @@
-body {
-  padding: 1%;
+div#wrapper {
+  width: 1024px;
+  margin: 0 auto;
 }
 .centered {
   margin-left: 40%;
@@ -33,4 +34,11 @@ body {
 }
 ul.pagination > li {
   cursor: pointer;
+}
+.bottom-align-text {
+  display: flex;
+  flex-direction: row;
+}
+.bottom-align-text-item {
+  align-self: flex-end;
 }
