@@ -9,37 +9,7 @@ export default class StoreBlkSlider extends React.Component {
 		this.prevThree = this.prevThree.bind(this);
 		this.FlipPage = this.FlipPage.bind(this);
 		this.state={
-			/*centered:{
-				marginLeft:'40%',
-				width:'20%',
-			},
-			cardRow:{
-				width:"92%",
-				margin:'5% 5% 5% 3%',
-				overflowX:"hidden",
-				overflowY:"hidden",
-				//backgroundColor:"tan",
-				display:'inline-flex',
-			},
-			showing:{
-				display:'block',
-				border: '1px solid #fff',
-				padding:'3%',
-				margin:'0',
-				marginLeft:'2%',
-				width:"31.33%",
-				height:"200px",
-				overflowX:"auto",
-				overflowY:"auto",
-				backgroundColor:"#DEDBD8",
-				//position:'absolute',
-				//top:"1%",
-				verticalAlign:'top'
-			},
-			hiding:{
-				display:"none",
-			},*/
-		}
+		};
 	}
 	FlipPage(e){
 		console.log("click page");
@@ -52,7 +22,6 @@ export default class StoreBlkSlider extends React.Component {
 			animateCss.animate(document.querySelector('#'+this.props.block+'card-'+(start_now+i).toString()),{animationName: 'slideOutLeft',
 				duration: 100,
 				callbacks: [function(){
-					//$('#'+this.props.block+'card-'+(start_now+i).toString()).css("display","");
 					
 				}]
 			});
@@ -101,7 +70,7 @@ export default class StoreBlkSlider extends React.Component {
 		return (
 			<div>
 				<div style={this.state.cardRow} className='startData=0 cardRow'>
-				{this.props.wholeSet.map(function(blk,index){return <div key={index} id={this.props.block+"card-"+index} className={(index<3)?'showing':'hiding'}><h5 className="text-danger">{blk.name}  {index}</h5><div className="card-block"><div>stars: {blk.stars}</div><div>location: {blk.location.city},{blk.location.zip},{blk.location.state}</div><div>categories: {blk.categories.join(" ")}</div></div></div>},this)}
+				{this.props.wholeSet.map(function(blk,index){return <div key={index} id={this.props.block+"card-"+index} className={(index<3)?'showing':'hiding'}><h5 className="text-danger">{blk.name}</h5><div className="card-block"><div>stars: {blk.stars}</div><div>location: {blk.location.city},{blk.location.zip},{blk.location.state}</div><div>categories: {blk.categories.join(" ")}</div></div></div>},this)}
 				</div>	
 				{this.props.wholeSet.length>3?<ul className="pagination pagination-md centered" >
 					<li onClick={this.prevThree}><a>&laquo;</a></li>
