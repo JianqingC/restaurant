@@ -7,13 +7,16 @@ export default class UserR extends React.Component {
    render() {
       return (
          <div className="well">
-            <div className="row ">
+            <div className="row bottom-align-text">
                <div className="col-md-3">
                   <h4 className="text-primary">Log in</h4>
+               </div>
+               <div className="col-md-9 bottom-align-text-item">
                   <span className="text-warning">Get Restaurants based on your record</span>
                </div>
-               <LogInForm className="col-md-9" wholeSet={this.props.wholeSet}/>
             </div>
+            <LogInForm wholeSet={this.props.wholeSet}/>
+            
          </div>
       );
    }
@@ -138,7 +141,8 @@ class LogInForm extends React.Component{
                <button className="btn btn-primary form-control" onClick={this._logOff} disabled>Register</button>
             </form>
             <div>
-           	{this.state.recommend.length>0?<StoreBlkSlider wholeSet={this.state.recommend} block={'user-'}/>:<span className="text-primary"></span>}</div>
+           	{this.state.recommend.length>0?<StoreBlkSlider wholeSet={this.state.recommend} block={'user-'}/>:<div className="text-primary"><span className="bg-muted">User 1</span>email:test@m.c password:test  <span className="bg-muted">User 2</span>email:chin@m.c password:test</div>}
+            </div>
         
          </div>
       );

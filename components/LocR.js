@@ -10,8 +10,8 @@ export default class LocR extends React.Component {
             <div className="row bottom-align-text">
                <h4 className="col-md-3 text-primary">Search Nearby Restaurant</h4>
                <div className="col-md-9 bottom-align-text-item">
-                  <span className="text-warning">Put Location to Find Near Restaurant. </span>
-                  <span className="text-muted small">(It is NOT real map tracking: the addresses are fake.)</span>
+                  <div className="text-warning">Put Location to Find Near Restaurant. </div>
+                  <div className="text-muted small">(It is NOT real map tracking: the addresses are fake.)</div>
                </div>
                
             </div>
