@@ -135,7 +135,7 @@ class LogInForm extends React.Component{
                </div>
                <button className="btn btn-primary form-control" type="submit" value="submit">Log In</button>
                <button className="btn btn-default form-control" type="reset" onClick={this._logOff}>Log Off</button>
-               <button className="btn btn-default form-control" type="" onClick={this._logOff} disabled>Register</button>
+               <button className="btn btn-primary form-control" onClick={this._logOff} disabled>Register</button>
             </form>
             <div>
            	{this.state.recommend.length>0?<StoreBlkSlider wholeSet={this.state.recommend} block={'user-'}/>:<span className="text-primary"></span>}</div>

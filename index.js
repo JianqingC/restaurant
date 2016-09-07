@@ -21920,38 +21920,7 @@
 			_this.nextThree = _this.nextThree.bind(_this);
 			_this.prevThree = _this.prevThree.bind(_this);
 			_this.FlipPage = _this.FlipPage.bind(_this);
-			_this.state = {
-				/*centered:{
-	   	marginLeft:'40%',
-	   	width:'20%',
-	   },
-	   cardRow:{
-	   	width:"92%",
-	   	margin:'5% 5% 5% 3%',
-	   	overflowX:"hidden",
-	   	overflowY:"hidden",
-	   	//backgroundColor:"tan",
-	   	display:'inline-flex',
-	   },
-	   showing:{
-	   	display:'block',
-	   	border: '1px solid #fff',
-	   	padding:'3%',
-	   	margin:'0',
-	   	marginLeft:'2%',
-	   	width:"31.33%",
-	   	height:"200px",
-	   	overflowX:"auto",
-	   	overflowY:"auto",
-	   	backgroundColor:"#DEDBD8",
-	   	//position:'absolute',
-	   	//top:"1%",
-	   	verticalAlign:'top'
-	   },
-	   hiding:{
-	   	display:"none",
-	   },*/
-			};
+			_this.state = {};
 			return _this;
 		}
 
@@ -21969,10 +21938,7 @@
 				for (var i = 0; i < 3; i++) {
 					animateCss.animate(document.querySelector('#' + this.props.block + 'card-' + (start_now + i).toString()), { animationName: 'slideOutLeft',
 						duration: 100,
-						callbacks: [function () {
-							//$('#'+this.props.block+'card-'+(start_now+i).toString()).css("display","");
-
-						}]
+						callbacks: [function () {}]
 					});
 					$('#' + this.props.block + 'card-' + (start_now + i).toString()).removeClass('showing').addClass('hiding'); //.css('hiding');
 					$('#' + this.props.block + 'card-' + (page_new + i).toString()).addClass('showing').removeClass('hiding'); //.css('showing');
@@ -22022,7 +21988,7 @@
 			value: function render() {
 				//var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 				return _react2.default.createElement('div', null, _react2.default.createElement('div', { style: this.state.cardRow, className: 'startData=0 cardRow' }, this.props.wholeSet.map(function (blk, index) {
-					return _react2.default.createElement('div', { key: index, id: this.props.block + "card-" + index, className: index < 3 ? 'showing' : 'hiding' }, _react2.default.createElement('h5', { className: 'text-danger' }, blk.name, '  ', index), _react2.default.createElement('div', { className: 'card-block' }, _react2.default.createElement('div', null, 'stars: ', blk.stars), _react2.default.createElement('div', null, 'location: ', blk.location.city, ',', blk.location.zip, ',', blk.location.state), _react2.default.createElement('div', null, 'categories: ', blk.categories.join(" "))));
+					return _react2.default.createElement('div', { key: index, id: this.props.block + "card-" + index, className: index < 3 ? 'showing' : 'hiding' }, _react2.default.createElement('h5', { className: 'text-danger' }, blk.name), _react2.default.createElement('div', { className: 'card-block' }, _react2.default.createElement('div', null, 'stars: ', blk.stars), _react2.default.createElement('div', null, 'location: ', blk.location.city, ',', blk.location.zip, ',', blk.location.state), _react2.default.createElement('div', null, 'categories: ', blk.categories.join(" "))));
 				}, this)), this.props.wholeSet.length > 3 ? _react2.default.createElement('ul', { className: 'pagination pagination-md centered' }, _react2.default.createElement('li', { onClick: this.prevThree }, _react2.default.createElement('a', null, '«')), _react2.default.createElement('li', { id: "card-" + this.props.block + "href-1" }, _react2.default.createElement('a', { className: '#card=0-2', onClick: this.FlipPage }, '1')), _react2.default.createElement('li', { id: "card-" + this.props.block + "href-2" }, _react2.default.createElement('a', { className: '#card=3-5', onClick: this.FlipPage }, '2')), _react2.default.createElement('li', { id: "card-" + this.props.block + "href-3" }, _react2.default.createElement('a', { className: '#card=6-8', onClick: this.FlipPage }, '3')), _react2.default.createElement('li', { onClick: this.nextThree }, _react2.default.createElement('a', null, '»'))) : _react2.default.createElement('span', null));
 			}
 		}]);
@@ -30963,7 +30929,7 @@
 	            }
 	         });
 	         categories_high = _.flatten(categories_high);
-	         console.log(categories_high);
+	         //console.log(categories_high);
 	         _.map(unvisited, function (x) {
 	            if (selected_visit.length > 0) {
 	               if (x.stars >= 3) {
@@ -31042,7 +31008,7 @@
 	      value: function render() {
 	         return _react2.default.createElement('div', null, _react2.default.createElement('form', { className: 'form-inline', onSubmit: this.updateState }, _react2.default.createElement('div', { className: 'input-group' }, _react2.default.createElement('label', { className: 'input-group-addon' }, 'Email'), _react2.default.createElement('input', { type: 'email', name: 'email', className: 'form-control', onChange: this._onChange
 	         })), _react2.default.createElement('div', { className: 'input-group' }, _react2.default.createElement('label', { className: 'input-group-addon' }, 'Password'), _react2.default.createElement('input', { type: 'password', name: 'password', className: 'form-control', onChange: this._onChange
-	         })), _react2.default.createElement('button', { className: 'btn btn-primary form-control', type: 'submit', value: 'submit' }, 'Log In'), _react2.default.createElement('button', { className: 'btn btn-default form-control', type: 'reset', onClick: this._logOff }, 'Log Off')), _react2.default.createElement('div', null, this.state.recommend.length > 0 ? _react2.default.createElement(_StoreBlkSlider2.default, { wholeSet: this.state.recommend, block: 'user-' }) : _react2.default.createElement('span', { className: 'text-primary' })));
+	         })), _react2.default.createElement('button', { className: 'btn btn-primary form-control', type: 'submit', value: 'submit' }, 'Log In'), _react2.default.createElement('button', { className: 'btn btn-default form-control', type: 'reset', onClick: this._logOff }, 'Log Off'), _react2.default.createElement('button', { className: 'btn btn-primary form-control', onClick: this._logOff, disabled: true }, 'Register')), _react2.default.createElement('div', null, this.state.recommend.length > 0 ? _react2.default.createElement(_StoreBlkSlider2.default, { wholeSet: this.state.recommend, block: 'user-' }) : _react2.default.createElement('span', { className: 'text-primary' })));
 	      }
 	   }]);
 
