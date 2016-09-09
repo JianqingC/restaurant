@@ -9,7 +9,6 @@ Demo Link:  [GitHub Demo Page](https://laurencui.github.io/restaurant/)
 
 ###Next:
 
-* Minifying the project source code
 * Implement more 'real' location recommendation. Now, the location data is totally fake, so all location search is not close to reality.
 * More test account. Current ones:
 
