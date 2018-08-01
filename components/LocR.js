@@ -6,12 +6,12 @@ export default class LocR extends React.Component {
    render() {
 
       return (
-         <div className="well">
-            <div className="row bottom-align-text">
-               <h4 className="col-md-3 text-primary">Search Nearby Restaurant</h4>
-               <div className="col-md-9 bottom-align-text-item">
+         <div className="well container">
+            <div className="row center-align-text">
+               <h4 className="col-md-12 text-primary">Search Nearby Restaurants</h4>
+               <div className="col-md-12 center-align-text-item">
                   <div className="text-warning">Put Location to Find Near Restaurant. </div>
-                  <div className="text-muted small">(It is NOT real map tracking: the addresses are fake.)</div>
+                  <div className="text-muted small">(NOT real map data tracking.)</div>
                </div>
                
             </div>
@@ -140,9 +140,10 @@ class LocForm extends React.Component{
                      <label  className="input-group-addon">Zip</label>
    					   <input type="text"  id="zip" name="zip" className="form-control"  placeholder='Zip Code' onChange = {this._onChange}/>
                   </div>
-                  <button onClick = {this._onClick} className="btn btn-info glyphicon glyphicon-map-marker form-control"></button>
-                  <button type="submit" value="submit" className="btn btn-primary form-control ">Search</button>
-               
+                  <div className="form-group">
+                     <button onClick = {this._onClick} className="btn btn-info glyphicon glyphicon-map-marker form-control"></button>
+                     <button type="submit" value="submit" className="btn btn-primary form-control ">Search</button>
+                  </div>
                </div>
                
 	         </form>

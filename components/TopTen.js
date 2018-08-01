@@ -6,7 +6,7 @@ import StoreBlkSlider from '../components/StoreBlkSlider.js';
 export default class TopTen extends React.Component {
    render(){
       return (
-         <div className="well">
+         <div className="container well first-blk">
             <h4 className="text-primary">Top Reviewed Restaurant</h4>
             <div className="row"><StoreBlkSlider
                   block={'top-'} wholeSet={this.props.wholeSet}/>

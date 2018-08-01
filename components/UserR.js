@@ -6,13 +6,13 @@ import StoreBlkSlider from '../components/StoreBlkSlider';
 export default class UserR extends React.Component {
    render() {
       return (
-         <div className="well">
-            <div className="row bottom-align-text">
-               <div className="col-md-3">
-                  <h4 className="text-primary">Log in</h4>
+         <div className="well container">
+            <div className="row center-align-text">
+               <div className="col-md-12">
+                  <h4 className="text-primary">Find out more from your record</h4>
                </div>
-               <div className="col-md-9 bottom-align-text-item">
-                  <span className="text-warning">Get Restaurants based on your record</span>
+               <div className="col-md-12 center-align-text-item">
+                  <span className="text-warning">Get Restaurants Suggestions After logging in:</span>
                </div>
             </div>
             <LogInForm wholeSet={this.props.wholeSet}/>
@@ -37,6 +37,7 @@ class LogInForm extends React.Component{
          ],
          currentuser:[],
          recommend:[],
+         loginResults: false
       }
 
       this.updateState = this.updateState.bind(this);
@@ -100,6 +101,7 @@ class LogInForm extends React.Component{
             tempResult = this._Cal(visited_all,[]);
          }
          this.setState({recommend:tempResult});
+         this.setState({ loginResults: true });
       }
    }
    _onChange(e) {
@@ -125,7 +127,7 @@ class LogInForm extends React.Component{
    render() {
       return (
          <div>
-            <form className="form-inline" onSubmit= {this.updateState}>
+            <form className="form-inline" id="usrForm" onSubmit= {this.updateState}>
                <div className="input-group">
                      <label className="input-group-addon">Email</label>
                      <input type="email" name="email" className="form-control" onChange = {this._onChange} 
@@ -136,13 +138,14 @@ class LogInForm extends React.Component{
                      <input type="password" name="password" className="form-control" onChange = {this._onChange} 
                       />
                </div>
-               <button className="btn btn-primary form-control" type="submit" value="submit">Log In</button>
-               <button className="btn btn-default form-control" type="reset" onClick={this._logOff}>Log Off</button>
+               { this.state.loginResults ?null:<button className="btn btn-primary form-control" type="submit" value="submit">Log In</button>}
+               { this.state.loginResults ? <button className="btn btn-info form-control" type="reset" onClick={this._logOff}>Log Off</button>: null }
                <button className="btn btn-primary form-control" onClick={this._logOff} disabled>Register</button>
-            </form>
-            <div>
-           	{this.state.recommend.length>0?<StoreBlkSlider wholeSet={this.state.recommend} block={'user-'}/>:<div className="text-primary"><span className="bg-muted">User 1</span>email:test@m.c password:test  <span className="bg-muted">User 2</span>email:chin@m.c password:test</div>}
+               <div>
+            {this.state.recommend.length>0?<StoreBlkSlider wholeSet={this.state.recommend} block={'user-'}/>:<p className="notification"><b>You may Try: </b><span className="user-sug">User 1</span>email:<b>test@m.c</b> password:<b>test</b>  <span className="user-sug">User 2</span>email:<b>chin@m.c</b> password:<b>test</b></p>}
             </div>
+            </form>
+            
         
          </div>
       );

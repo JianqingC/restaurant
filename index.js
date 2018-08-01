@@ -21695,7 +21695,7 @@
 	   _createClass(Header, [{
 	      key: "render",
 	      value: function render() {
-	         return _react2.default.createElement("div", null, _react2.default.createElement("h1", { className: "text-primary center-block" }, "Restaurant"));
+	         return _react2.default.createElement("div", { className: "header" }, _react2.default.createElement("h1", { className: "text-primary center-block" }, "Restaurant For You"));
 	      }
 	   }]);
 
@@ -21772,7 +21772,7 @@
 	   _createClass(TopTen, [{
 	      key: 'render',
 	      value: function render() {
-	         return _react2.default.createElement('div', { className: 'well' }, _react2.default.createElement('h4', { className: 'text-primary' }, 'Top Reviewed Restaurant'), _react2.default.createElement('div', { className: 'row' }, _react2.default.createElement(_StoreBlkSlider2.default, {
+	         return _react2.default.createElement('div', { className: 'container well first-blk' }, _react2.default.createElement('h4', { className: 'text-primary' }, 'Top Reviewed Restaurant'), _react2.default.createElement('div', { className: 'row' }, _react2.default.createElement(_StoreBlkSlider2.default, {
 	            block: 'top-', wholeSet: this.props.wholeSet })));
 	      }
 	   }]);
@@ -22219,7 +22219,7 @@
 	      key: 'render',
 	      value: function render() {
 
-	         return _react2.default.createElement('div', { className: 'well' }, _react2.default.createElement('div', { className: 'row bottom-align-text' }, _react2.default.createElement('h4', { className: 'col-md-3 text-primary' }, 'Search Nearby Restaurant'), _react2.default.createElement('div', { className: 'col-md-9 bottom-align-text-item' }, _react2.default.createElement('div', { className: 'text-warning' }, 'Put Location to Find Near Restaurant. '), _react2.default.createElement('div', { className: 'text-muted small' }, '(It is NOT real map tracking: the addresses are fake.)'))), _react2.default.createElement('div', null, _react2.default.createElement(LocForm, { wholeSet: this.props.wholeSet })));
+	         return _react2.default.createElement('div', { className: 'well container' }, _react2.default.createElement('div', { className: 'row center-align-text' }, _react2.default.createElement('h4', { className: 'col-md-12 text-primary' }, 'Search Nearby Restaurants'), _react2.default.createElement('div', { className: 'col-md-12 center-align-text-item' }, _react2.default.createElement('div', { className: 'text-warning' }, 'Put Location to Find Near Restaurant. '), _react2.default.createElement('div', { className: 'text-muted small' }, '(NOT real map data tracking.)'))), _react2.default.createElement('div', null, _react2.default.createElement(LocForm, { wholeSet: this.props.wholeSet })));
 	      }
 	   }]);
 
@@ -22339,7 +22339,7 @@
 	      key: 'render',
 	      value: function render() {
 	         return _react2.default.createElement('div', { className: '' }, _react2.default.createElement('form', { className: 'form-inline', onSubmit: this.updateState, id: 'locForm' }, _react2.default.createElement('div', { className: 'form-group' }, _react2.default.createElement('div', { className: 'input-group' }, _react2.default.createElement('label', { className: 'input-group-addon' }, 'City'), _react2.default.createElement('div', { className: 'btn-group' }, _react2.default.createElement('input', { type: 'text', id: 'city', name: 'city', className: 'form-control', placeholder: 'City', onChange: this._onChange
-	         }), _react2.default.createElement('ul', { className: 'dropdown-menu' }, _react2.default.createElement('li', { onClick: this._dropdownClick }, 'San Jose'), _react2.default.createElement('li', { onClick: this._dropdownClick }, 'San Fransisco'), _react2.default.createElement('li', { onClick: this._dropdownClick }, 'Los Angelos'), _react2.default.createElement('li', { className: 'text-muted' }, 'Other City'))), _react2.default.createElement('div', { className: 'input-group-addon', onClick: this._dropdown }, _react2.default.createElement('span', { className: 'caret' }))), _react2.default.createElement('div', { className: 'input-group' }, _react2.default.createElement('label', { className: 'input-group-addon' }, 'State'), _react2.default.createElement('div', { className: 'btn-group' }, _react2.default.createElement('input', { type: 'text', name: 'state', id: 'state', className: 'form-control', placeholder: 'State', onChange: this._onChange }), _react2.default.createElement('ul', { className: 'dropdown-menu' }, _react2.default.createElement('li', { onClick: this._dropdownClick }, 'CA'), _react2.default.createElement('li', { className: 'text-muted' }, 'Other State'))), _react2.default.createElement('div', { className: 'input-group-addon', onClick: this._dropdown }, _react2.default.createElement('span', { className: 'caret' }))), _react2.default.createElement('div', { className: 'input-group' }, _react2.default.createElement('label', { className: 'input-group-addon' }, 'Zip'), _react2.default.createElement('input', { type: 'text', id: 'zip', name: 'zip', className: 'form-control', placeholder: 'Zip Code', onChange: this._onChange })), _react2.default.createElement('button', { onClick: this._onClick, className: 'btn btn-info glyphicon glyphicon-map-marker form-control' }), _react2.default.createElement('button', { type: 'submit', value: 'submit', className: 'btn btn-primary form-control ' }, 'Search'))), _react2.default.createElement('div', null, this.state.data.length > 0 ? _react2.default.createElement(_StoreBlkSlider2.default, { wholeSet: this.state.data, block: 'loc-' }) : _react2.default.createElement('span', { className: 'text-primary' }, this.state.notice)));
+	         }), _react2.default.createElement('ul', { className: 'dropdown-menu' }, _react2.default.createElement('li', { onClick: this._dropdownClick }, 'San Jose'), _react2.default.createElement('li', { onClick: this._dropdownClick }, 'San Fransisco'), _react2.default.createElement('li', { onClick: this._dropdownClick }, 'Los Angelos'), _react2.default.createElement('li', { className: 'text-muted' }, 'Other City'))), _react2.default.createElement('div', { className: 'input-group-addon', onClick: this._dropdown }, _react2.default.createElement('span', { className: 'caret' }))), _react2.default.createElement('div', { className: 'input-group' }, _react2.default.createElement('label', { className: 'input-group-addon' }, 'State'), _react2.default.createElement('div', { className: 'btn-group' }, _react2.default.createElement('input', { type: 'text', name: 'state', id: 'state', className: 'form-control', placeholder: 'State', onChange: this._onChange }), _react2.default.createElement('ul', { className: 'dropdown-menu' }, _react2.default.createElement('li', { onClick: this._dropdownClick }, 'CA'), _react2.default.createElement('li', { className: 'text-muted' }, 'Other State'))), _react2.default.createElement('div', { className: 'input-group-addon', onClick: this._dropdown }, _react2.default.createElement('span', { className: 'caret' }))), _react2.default.createElement('div', { className: 'input-group' }, _react2.default.createElement('label', { className: 'input-group-addon' }, 'Zip'), _react2.default.createElement('input', { type: 'text', id: 'zip', name: 'zip', className: 'form-control', placeholder: 'Zip Code', onChange: this._onChange })), _react2.default.createElement('div', { className: 'form-group' }, _react2.default.createElement('button', { onClick: this._onClick, className: 'btn btn-info glyphicon glyphicon-map-marker form-control' }), _react2.default.createElement('button', { type: 'submit', value: 'submit', className: 'btn btn-primary form-control ' }, 'Search')))), _react2.default.createElement('div', null, this.state.data.length > 0 ? _react2.default.createElement(_StoreBlkSlider2.default, { wholeSet: this.state.data, block: 'loc-' }) : _react2.default.createElement('span', { className: 'text-primary' }, this.state.notice)));
 	      }
 	   }]);
 
@@ -30874,7 +30874,7 @@
 	   _createClass(UserR, [{
 	      key: 'render',
 	      value: function render() {
-	         return _react2.default.createElement('div', { className: 'well' }, _react2.default.createElement('div', { className: 'row bottom-align-text' }, _react2.default.createElement('div', { className: 'col-md-3' }, _react2.default.createElement('h4', { className: 'text-primary' }, 'Log in')), _react2.default.createElement('div', { className: 'col-md-9 bottom-align-text-item' }, _react2.default.createElement('span', { className: 'text-warning' }, 'Get Restaurants based on your record'))), _react2.default.createElement(LogInForm, { wholeSet: this.props.wholeSet }));
+	         return _react2.default.createElement('div', { className: 'well container' }, _react2.default.createElement('div', { className: 'row center-align-text' }, _react2.default.createElement('div', { className: 'col-md-12' }, _react2.default.createElement('h4', { className: 'text-primary' }, 'Find out more from your record')), _react2.default.createElement('div', { className: 'col-md-12 center-align-text-item' }, _react2.default.createElement('span', { className: 'text-warning' }, 'Get Restaurants Suggestions After logging in:'))), _react2.default.createElement(LogInForm, { wholeSet: this.props.wholeSet }));
 	      }
 	   }]);
 
@@ -30897,7 +30897,8 @@
 	         data: [],
 	         users: [{ email: 'test@m.c', password: 'test', reviews: [{ name: 'r1', rate: 4 }] }, { email: 'chin@m.c', password: 'test', reviews: [{ name: 'r4', rate: 5 }, { name: 'r5', rate: 1 }] }],
 	         currentuser: [],
-	         recommend: []
+	         recommend: [],
+	         loginResults: false
 	      };
 
 	      _this2.updateState = _this2.updateState.bind(_this2);
@@ -30980,6 +30981,7 @@
 	               tempResult = this._Cal(visited_all, []);
 	            }
 	            this.setState({ recommend: tempResult });
+	            this.setState({ loginResults: true });
 	         }
 	      }
 	   }, {
@@ -31006,9 +31008,9 @@
 	   }, {
 	      key: 'render',
 	      value: function render() {
-	         return _react2.default.createElement('div', null, _react2.default.createElement('form', { className: 'form-inline', onSubmit: this.updateState }, _react2.default.createElement('div', { className: 'input-group' }, _react2.default.createElement('label', { className: 'input-group-addon' }, 'Email'), _react2.default.createElement('input', { type: 'email', name: 'email', className: 'form-control', onChange: this._onChange
+	         return _react2.default.createElement('div', null, _react2.default.createElement('form', { className: 'form-inline', id: 'usrForm', onSubmit: this.updateState }, _react2.default.createElement('div', { className: 'input-group' }, _react2.default.createElement('label', { className: 'input-group-addon' }, 'Email'), _react2.default.createElement('input', { type: 'email', name: 'email', className: 'form-control', onChange: this._onChange
 	         })), _react2.default.createElement('div', { className: 'input-group' }, _react2.default.createElement('label', { className: 'input-group-addon' }, 'Password'), _react2.default.createElement('input', { type: 'password', name: 'password', className: 'form-control', onChange: this._onChange
-	         })), _react2.default.createElement('button', { className: 'btn btn-primary form-control', type: 'submit', value: 'submit' }, 'Log In'), _react2.default.createElement('button', { className: 'btn btn-default form-control', type: 'reset', onClick: this._logOff }, 'Log Off'), _react2.default.createElement('button', { className: 'btn btn-primary form-control', onClick: this._logOff, disabled: true }, 'Register')), _react2.default.createElement('div', null, this.state.recommend.length > 0 ? _react2.default.createElement(_StoreBlkSlider2.default, { wholeSet: this.state.recommend, block: 'user-' }) : _react2.default.createElement('div', { className: 'text-primary' }, _react2.default.createElement('span', { className: 'bg-muted' }, 'User 1'), 'email:test@m.c password:test  ', _react2.default.createElement('span', { className: 'bg-muted' }, 'User 2'), 'email:chin@m.c password:test')));
+	         })), this.state.loginResults ? null : _react2.default.createElement('button', { className: 'btn btn-primary form-control', type: 'submit', value: 'submit' }, 'Log In'), this.state.loginResults ? _react2.default.createElement('button', { className: 'btn btn-info form-control', type: 'reset', onClick: this._logOff }, 'Log Off') : null, _react2.default.createElement('button', { className: 'btn btn-primary form-control', onClick: this._logOff, disabled: true }, 'Register'), _react2.default.createElement('div', null, this.state.recommend.length > 0 ? _react2.default.createElement(_StoreBlkSlider2.default, { wholeSet: this.state.recommend, block: 'user-' }) : _react2.default.createElement('p', { className: 'notification' }, _react2.default.createElement('b', null, 'You may Try: '), _react2.default.createElement('span', { className: 'user-sug' }, 'User 1'), 'email:', _react2.default.createElement('b', null, 'test@m.c'), ' password:', _react2.default.createElement('b', null, 'test'), '  ', _react2.default.createElement('span', { className: 'user-sug' }, 'User 2'), 'email:', _react2.default.createElement('b', null, 'chin@m.c'), ' password:', _react2.default.createElement('b', null, 'test')))));
 	      }
 	   }]);
 
