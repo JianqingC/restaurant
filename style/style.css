@@ -141,6 +141,8 @@ fieldset[disabled] .form-control {
   background-color: #fff;
   border-color: #57bc90;
 }
+.btn-info:active:hover,
+.btn-info.active:hover,
 .btn-info:active,
 .btn-info:focus,
 .btn-info.focus,
