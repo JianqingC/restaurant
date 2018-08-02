@@ -160,6 +160,13 @@ p {
   margin-top: 15px;
   margin-bottom: 15px;
 }
+a {
+  color: #77c9d4;
+  text-decoration: none;
+}
+a:hover {
+  color: #57bc90;
+}
 #locForm,
 #usrForm {
   width: 92%;
