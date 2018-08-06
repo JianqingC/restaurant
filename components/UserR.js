@@ -127,22 +127,26 @@ class LogInForm extends React.Component{
    render() {
       return (
          <div>
-            <form className="form-inline" id="usrForm" onSubmit= {this.updateState}>
-               <div className="input-group">
+            <form className="form-inline " id="usrForm" onSubmit= {this.updateState}>
+            <div className="form-group row">
+               <div className="input-group col-md-push-2 col-md-4">
                      <label className="input-group-addon">Email</label>
                      <input type="email" name="email" className="form-control" onChange = {this._onChange} 
                      />
                </div>
-               <div className="input-group">
+               <div className="input-group col-md-push-2  col-md-4">
                      <label className="input-group-addon">Password</label>
                      <input type="password" name="password" className="form-control" onChange = {this._onChange} 
                       />
                </div>
+               <div className="form-group text-center btn-row">
                { this.state.loginResults ?null:<button className="btn btn-primary form-control" type="submit" value="submit">Log In</button>}
                { this.state.loginResults ? <button className="btn btn-info form-control" type="reset" onClick={this._logOff}>Log Off</button>: null }
                <button className="btn btn-primary form-control" onClick={this._logOff} disabled>Register</button>
+               </div>
                <div>
             {this.state.recommend.length>0?<StoreBlkSlider wholeSet={this.state.recommend} block={'user-'}/>:<p className="notification"><b>You may Try: </b><span className="user-sug">User 1</span>email:<b>test@m.c</b> password:<b>test</b>  <span className="user-sug">User 2</span>email:<b>chin@m.c</b> password:<b>test</b></p>}
+            </div>
             </div>
             </form>
             

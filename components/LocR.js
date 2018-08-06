@@ -110,8 +110,8 @@ class LocForm extends React.Component{
       return (
          <div className="">
 	         <form className="form-inline" onSubmit= {this.updateState} id="locForm">
-   				<div className="form-group">
-                  <div className="input-group">
+   				<div className="form-group row">
+                  <div className="input-group col-md-4">
    		            <label className="input-group-addon">City</label>
                      <div className="btn-group">
                        <input type="text"  id="city" name="city" className="form-control" placeholder='City' onChange = {this._onChange} 
@@ -125,7 +125,7 @@ class LocForm extends React.Component{
                      </div>
                      <div className="input-group-addon"  onClick={this._dropdown}><span className="caret"></span></div>
                   </div> 
-                  <div className="input-group">
+                  <div className="input-group col-md-4">
    		            <label  className="input-group-addon">State</label>
                      <div className="btn-group">
    					    <input type="text" name="state" id="state" className="form-control"  placeholder='State' onChange = {this._onChange}/>
@@ -136,11 +136,11 @@ class LocForm extends React.Component{
                      </div>
                      <div className="input-group-addon"  onClick={this._dropdown}><span className="caret"></span></div>
                   </div>
-   					<div className="input-group">
+   					<div className="input-group col-md-4">
                      <label  className="input-group-addon">Zip</label>
    					   <input type="text"  id="zip" name="zip" className="form-control"  placeholder='Zip Code' onChange = {this._onChange}/>
                   </div>
-                  <div className="form-group">
+                  <div className="form-group text-center btn-row">
                      <button onClick = {this._onClick} className="btn btn-info glyphicon glyphicon-map-marker form-control"></button>
                      <button type="submit" value="submit" className="btn btn-primary form-control ">Search</button>
                   </div>
