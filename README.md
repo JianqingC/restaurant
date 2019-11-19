@@ -5,7 +5,7 @@ Current version was implemented with vanilla React and Mock data.
 
 The Style was implememnted with Bootstrap and Bootswatch.
 
-Demo Link:  [GitHub Demo Page](https://laurencui.github.io/restaurant/)
+Demo Link:  [GitHub Demo Page](https://jianqingc.github.io/restaurant/)
 
 ###Next:
 
